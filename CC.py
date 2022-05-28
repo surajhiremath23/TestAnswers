@@ -8,16 +8,17 @@ def trim(temp,i,j):
     n=len(temp)
     b= temp[j:n]
     temp = a+b
-    print(temp)
-    # return temp
+    # print(temp)
+    return temp
 
-for k in range(len(Str)-2):
+for k in range(len(Str)-1):
     if Str[i] != Str[j]:
         if count >= 2:
-            trim(Str,i,j)
+            Str=trim(Str,i,j)
             i=i-1
-            j=j+1
-            print(i,j)
+            # print(j)
+            j=j-count-1
+            # print(i,j)
             count = 0
     if Str[i] == Str[j] :
         count += 1
@@ -25,3 +26,4 @@ for k in range(len(Str)-2):
     else:
         i+=1
         j+=1 
+print(Str)
